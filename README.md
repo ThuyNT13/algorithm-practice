@@ -4,11 +4,13 @@ practice algorithms
 
 ## Installation
 
-Fork into your own project repository: 
+Fork into your own project repository and replace the contents of README.md with your project's. Feel free to remove any sections that aren't applicable to your project:
 
-```bash
-git clone https://github.com/ThuyNT13/algorithm-practice
-```
+- Name
+- Description
+- Installation instructions
+- Support instructions
+- Contributing instructions
 
 Add README.md, and commit:
 
@@ -16,19 +18,6 @@ Add README.md, and commit:
 git add README.md
 git commit -m "Add README file"
 ```
-
-## Usage
-
-Replace the contents of README.md with your project's:
-
-- Name
-- Description
-- Installation instructions
-- Usage instructions
-- Support instructions
-- Contributing instructions
-
-Feel free to remove any sections that aren't applicable to your project.
 
 ## Support
 
