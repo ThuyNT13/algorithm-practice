@@ -2,29 +2,38 @@
 
 practice algorithms
 
-Installation
+## Installation
 
-Download to your project directory, add README.md, and commit:
+Fork into your own project repository: 
 
+```bash
+git clone https://github.com/ThuyNT13/algorithm-practice
+```
+
+Add README.md, and commit:
+
+```bash
 git add README.md
-git commit -m "Use README Boilerplate"
+git commit -m "Add README file"
+```
 
-Usage
+## Usage
 
 Replace the contents of README.md with your project's:
 
-Name
-Description
-Installation instructions
-Usage instructions
-Support instructions
-Contributing instructions
+- Name
+- Description
+- Installation instructions
+- Usage instructions
+- Support instructions
+- Contributing instructions
+
 Feel free to remove any sections that aren't applicable to your project.
 
-Support
+## Support
 
-Please open an issue for support.
+Please open [an issue](https://github.com/ThuyNT13/algorithm-practice/issues) for support.
 
-Contributing
+## Contributing
 
-Please contribute using Github Flow. Create a branch, add commits, and open a pull request.
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and open a [pull request](https://github.com/ThuyNT13/algorithm-practice/pulls).
