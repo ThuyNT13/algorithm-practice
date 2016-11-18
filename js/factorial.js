@@ -23,6 +23,7 @@ function factorialRecursive(num) {
   if (num === 1 || num === 0) {
     return 1;
   }
+  // console.log(num + " " + factorialRecursive(num - 1));
   // recursive factorial
   return num * factorialRecursive(num - 1);
 }
