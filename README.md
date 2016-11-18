@@ -1,6 +1,6 @@
 # algorithm-practice
 
-For practicing algorithms and TDD. At the moment, using JavaScript and Jasmine. 
+For practicing algorithms and Behavior-Driven Development in [Jasmine](https://jasmine.github.io/2.4/introduction.html). 
 
 Tests have been written using the Jasmine testing library. Run the respective runner files in the browser to get test results.
 
