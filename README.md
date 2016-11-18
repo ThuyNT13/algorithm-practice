@@ -1,6 +1,8 @@
 # algorithm-practice
 
-practice algorithms
+For practicing algorithms and TDD. At the moment, using JavaScript and Jasmine. 
+
+Tests have been written using the Jasmine testing library. Run the respective runner files in the browser to get test results.
 
 ## Installation
 
