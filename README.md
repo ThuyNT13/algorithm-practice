@@ -1,6 +1,6 @@
 # algorithm-practice
 
-For practicing algorithms and Behavior-Driven Development in [Jasmine](https://jasmine.github.io/2.4/introduction.html). 
+For practicing algorithms and Behavior-Driven Development in [Jasmine](https://jasmine.github.io/2.4/introduction.html) version 2.5.2. 
 
 Run the respective runner files in the browser to get test results.
 
