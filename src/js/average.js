@@ -23,7 +23,7 @@ function median(numbers) {
 
 // alternative, which is faster?
 function median(numbers) {
-  numbers.sort(function(a, b){return a-b});
+  numbers.sort((a, b) => a - b);
 
   var midIndex = Math.floor(numbers.length / 2);
 
@@ -32,11 +32,16 @@ function median(numbers) {
   } else {
     return numbers[midIndex];
   }
-
 }
 
 function mode(numbers) {
-  // Your code here!
-  // Ex. Mode array:
-  // var mode = { 5:3, 6:3 }
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
+  // sort array and compare => function(a, b) { if (a===b) {... }
+    // - if numbers are equal
+      // - set counter and keep track of maxCount
+      // - assign to currentMode if maxCount is more than current maxCount
+  //  -
+
 }
