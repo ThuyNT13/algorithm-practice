@@ -15,10 +15,8 @@ function fibonacciIterative(number) {
 }
 
 function fibonacciRecursive(number) {
-  // base case
-  if (number <= 1) {
+  if (number <= 1) { // base case
     return number;
-  } else {
-    return fibonacciRecursive(number - 1) + fibonacciRecursive(number - 2);
   }
+  return fibonacciRecursive(number - 1) + fibonacciRecursive(number - 2);
 }
