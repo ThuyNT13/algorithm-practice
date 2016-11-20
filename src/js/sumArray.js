@@ -1,29 +1,19 @@
-var result = 1;
-for (var i = 0; i < 5; i++) {
-  console.log(i + " + " + result + " = " + (i + result));
-  result += i;
+function sumWhile(numArray) {
+  var i = 0;
+  var sum = 0;
+  while (i < numArray.length) {
+    console.log(numArray[i] + " + " + sum + " = " + (numArray[i] + sum));
+    sum += numArray[i];
+    i++;
+  }
+  return sum;
 }
-console.log("-----");
-console.log("The result is " + result);
-console.log("---------------");
 
-var numbers = [1, 2, 3, 4];
-var counter = 0;
-var sum = 0;
-
-// while (counter < numbers.length) {
-//   console.log(numbers[counter] + " + " + sum + " = " + (numbers[counter] + sum));
-//   sum += numbers[counter];
-//   counter++;
-// }
-// console.log("-----");
-// console.log("Total sum is " + sum);
-// console.log("-----------------");
-
-for(var counter = 0; counter < numbers.length; counter++) {
-  console.log(numbers[counter] + " + " + sum + " = " + (numbers[counter] + sum));
-  sum += numbers[counter];
+function sumFor(numArray) {
+  var sum = 0;
+  for(var i = 0; i < numArray.length; i++) {
+    // console.log(numArray[i] + " + " + sum + " = " + (numArray[i] + sumi
+    sum += numArray[i];
+  }
+  return sum;
 }
-console.log("-----");
-console.log("Total sum is " + sum);
-console.log("---------------");
