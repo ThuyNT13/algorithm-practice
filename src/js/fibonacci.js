@@ -1,5 +1,5 @@
 function fibonacciIterative(number) {
-  if (number <= 1) {
+  if (number === 1 || number === 0) {
     return number;
   } else {
     var fib = [0,1];
@@ -15,7 +15,7 @@ function fibonacciIterative(number) {
 }
 
 function fibonacciRecursive(number) {
-  if (number <= 1) { // base case
+  if (number === 1 || number === 0) {
     return number;
   }
   return fibonacciRecursive(number - 1) + fibonacciRecursive(number - 2);
