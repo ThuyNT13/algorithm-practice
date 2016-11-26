@@ -2,7 +2,7 @@ describe('fizzbuzz()', function() {
   it('returns number if neither divisible by 3 or 5', function() {
     expect(fizzbuzz(1)).toBe(1);
     expect(fizzbuzz(2)).toBe(2);
-    expect(fizzbuzz(56)).toBe(56)
+    expect(fizzbuzz(56)).toBe(56);
   });
   it('returns "fizz" for numbers divisible by 3', function() {
     expect(fizzbuzz(3)).toBe("fizz");
