@@ -1,17 +1,17 @@
 function fibonacciIterative(number) {
   if (number === 1 || number === 0) {
     return number;
-  } else {
-    var fib = [0,1];
+  }
+    var fib1 = 0;
+    var fib2 = 1;
     var fibSum = 0;
     for (var i = 0; i < number-1; i++) {
-      fibSum = ((fib[0]) + (fib[1]));
-      // console.log(i+2 + ". " + fib[0] + " + " + fib[1] + " = " + fibSum);
-      fib[0] = fib[1];
-      fib[1] = fibSum;
+      fibSum = fib1 + fib2;
+      // console.log(i+2 + ". " + fib1 + " + " + fib2 + " = " + fibSum);
+      fib1 = fib2;
+      fib2 = fibSum;
     }
     return fibSum;
-  }
 }
 
 function fibonacciRecursive(number) {
