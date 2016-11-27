@@ -2,16 +2,16 @@ function fibonacciIterative(number) {
   if (number === 1 || number === 0) {
     return number;
   }
-    var fib1 = 0;
-    var fib2 = 1;
-    var fibSum = 0;
+    var fibPrev = 0;
+    var fibCurrent = 1;
+    var fibNext = 0;
     for (var i = 0; i < number-1; i++) {
-      fibSum = fib1 + fib2;
+      fibNext = fibPrev + fibCurrent;
       // console.log(i+2 + ". " + fib1 + " + " + fib2 + " = " + fibSum);
-      fib1 = fib2;
-      fib2 = fibSum;
+      fibPrev = fibCurrent;
+      fibCurrent = fibNext;
     }
-    return fibSum;
+    return fibNext;
 }
 
 function fibonacciRecursive(number) {
