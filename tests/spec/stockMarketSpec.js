@@ -1,6 +1,6 @@
 describe('get_max_profit()', function() {
-  inspect('returns the loss in a market transaction', function() {
-    var array = [10, 7, 6, 5, 3, 1];
+  inspect('returns the minimal loss in a market transaction', function() {
+    var array = [10, 8, 7, 6, 5, 1];
     var array1 = [10, 9, 8, 7, 6, 5];
     expect(get_max_profit(array)).toEqual(-2); // will return only latest?
     expect(get_max_profit(array1)).toEqual(-1);
