@@ -22,11 +22,11 @@ function get_max_profit(array) {
       var value = array[indices];
 
       if (value < lowestPrice) {
-        lowestPrice.push(value);
+        lowestPrice = value;
       } else if (value > lowestPrice) {
         currentProfit = value - lowestPrice;
         if (currentProfit > profit) {
-           profit.push(currentProfit);
+           profit = currentProfit;
         }
       }
     }
