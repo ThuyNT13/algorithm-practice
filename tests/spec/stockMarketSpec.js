@@ -15,13 +15,13 @@ describe('get_max_profit()', function() {
   });
 
   describe('returns the highest profit', function() {
-    it('returns 6 for [10, 7, 5, 8, 11, 9]', function() {
-      var array2 = [10, 7, 5, 8, 11, 9];
-      expect(get_max_profit(array2)).toEqual(6);
-    });
     it('returns 7 for [10, 4, 5, 6, 7, 2, 9]', function() {
       var array3 = [10, 4, 5, 6, 7, 2, 9];
       expect(get_max_profit(array3)).toEqual(7);
     })
+    it('returns 6 for [10, 7, 5, 8, 11, 9]', function() {
+      var array2 = [10, 7, 5, 15, 11, 9];
+      expect(get_max_profit(array2)).toEqual(10);
+    });
   });
 });
