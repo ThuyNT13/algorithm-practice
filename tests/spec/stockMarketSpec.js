@@ -14,15 +14,13 @@ describe('get_max_profit()', function() {
     });
   });
 
-
-// use const i/o var
   describe('returns the highest profit', function() {
     it('returns 7 for [10, 4, 5, 6, 7, 2, 9]', function() {
       var array3 = [10, 4, 5, 6, 7, 2, 9];
       expect(get_max_profit(array3)).toEqual(7);
-    })
+    });
     it('returns 10 for [10, 7, 5, 15, 11, 9]', function() {
-      varc array4 = [10, 7, 5, 15, 11, 9];
+      var array4 = [10, 7, 5, 15, 11, 9];
       expect(get_max_profit(array4)).toEqual(10);
     });
   });
