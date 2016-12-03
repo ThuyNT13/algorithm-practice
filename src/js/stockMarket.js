@@ -15,20 +15,24 @@ No "shorting"—you must buy before you sell. You may not buy and sell in the sa
 
 function get_max_profit(array) {
 
-  var lowestPrice = [];
-  var profit = array[] - lowestPrice;
-
+  var lowestPrice = array[0];
+  var profit = 0;
     for (var indices in array) {
       var value = array[indices];
-
-      if (value < lowestPrice) {
-        lowestPrice = value;
-      } else if (value > lowestPrice) {
+      // console.log("value: " + value + "; indices: " + indices + "; lowest$: " + lowestPrice); // prints
         currentProfit = value - lowestPrice;
-        if (currentProfit > profit) {
-           profit = currentProfit;
-        }
+        console.log("if value < lp: " + value + " - lowestPrice " + lowestPrice + " = " + currentProfit + "(profit: )" + profit);
+        // profit = currentProfit;
+      if (currentProfit < profit) { // currentProfit = negative number
+        // console.log(" profit " + profit + " vs currentProfit " + currentProfit); // same
+        lowestPrice = value;
+      } else if (currentProfit >= profit) {
+        console.log("else if, value >lp : " + value + " lowestPrice: " + lowestPrice);
+        // console.log("before profit: " + profit); // stays array[0]
+        // currentProfit = value - lowestPrice;
+          profit = currentProfit;
+        console.log("after profit: " + profit);
       }
     }
-
+  return profit;
 }
