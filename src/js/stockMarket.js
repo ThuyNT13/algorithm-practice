@@ -13,26 +13,21 @@ get_max_profit(stock_prices_yesterday)
 No "shorting"—you must buy before you sell. You may not buy and sell in the same time step (at least 1 minute must pass).
 */
 
-function get_max_profit(array) {
-
-  var lowestPrice = array[0];
-  var profit = 0;
-    for (var indices in array) {
-      var value = array[indices];
-      // console.log("value: " + value + "; indices: " + indices + "; lowest$: " + lowestPrice); // prints
-        currentProfit = value - lowestPrice;
-        console.log("if value < lp: " + value + " - lowestPrice " + lowestPrice + " = " + currentProfit + "(profit: )" + profit);
-        // profit = currentProfit;
-      if (currentProfit < profit) { // currentProfit = negative number
-        // console.log(" profit " + profit + " vs currentProfit " + currentProfit); // same
-        lowestPrice = value;
-      } else if (currentProfit >= profit) {
-        console.log("else if, value >lp : " + value + " lowestPrice: " + lowestPrice);
-        // console.log("before profit: " + profit); // stays array[0]
-        // currentProfit = value - lowestPrice;
-          profit = currentProfit;
-        console.log("after profit: " + profit);
-      }
+var profit = 0;
+function get_max_profit(stock_prices_yesterday) {
+  console.log("value - lowestPrice = currentProfit(profit)");
+  var lowestPrice = stock_prices_yesterday[0];
+  for (var indices in stock_prices_yesterday) {
+    var value = stock_prices_yesterday[indices];
+    var currentProfit = value - lowestPrice;
+    if (value < lowestPrice) {
+      console.log(value+ " - " +lowestPrice+ " = loss " +currentProfit+ "(" +profit+ ")");
+      lowestPrice = value;
+      // profit = currentProfit;
+    } else if (value >= lowestPrice && currentProfit > profit) {
+      console.log(value+ " - " +lowestPrice+ " = gain " +currentProfit+ "(" +profit+ ")");
+      profit = currentProfit;
     }
+  }
   return profit;
 }
