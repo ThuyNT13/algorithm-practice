@@ -1,6 +1,6 @@
 # algorithm-practice
 
-For practicing algorithms and Behavior-Driven Development in [Jasmine](https://jasmine.github.io/2.4/introduction.html) version 2.5.2. 
+For practicing algorithms and Behavior-Driven Development in [Jasmine](https://jasmine.github.io/2.4/introduction.html) version 2.5.2.
 
 Run the respective runner files in the browser to get test results.
 
@@ -8,22 +8,7 @@ Run the respective runner files in the browser to get test results.
 open SpecRunner.html
 ```
 
-## Installation
-
-Fork into your own project repository and replace the contents of README.md with your project's. Feel free to remove any sections that aren't applicable to your project:
-
-- Name
-- Description
-- Installation instructions
-- Support instructions
-- Contributing instructions
-
-Add README.md, and commit:
-
-```bash
-git add README.md
-git commit -m "Add README file"
-```
+[Average](src/js/average.js)
 
 ## Support
 
