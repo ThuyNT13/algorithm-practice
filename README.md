@@ -10,12 +10,12 @@ open SpecRunner.html
 
 ## Algorithms
 
-[Average](src/js/average.js)
-[Factorial](src/js/factorial.js)
-[Fibonacci](src/js/fibonacci.js)
-[FizzBuzz](src/js/fizzbuzz.js)
-[Reverse String](src/js/reverseString.js)
-[Stock Market](src/js/stockMarket.js)
+* [Average](src/js/average.js)
+* [Factorial](src/js/factorial.js)
+* [Fibonacci](src/js/fibonacci.js)
+* [FizzBuzz](src/js/fizzbuzz.js)
+* [Reverse String](src/js/reverseString.js)
+* [Stock Market](src/js/stockMarket.js)
 
 ## Support
 
