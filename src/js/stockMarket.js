@@ -13,22 +13,49 @@ get_max_profit(stock_prices_yesterday)
 No "shorting"—you must buy before you sell. You may not buy and sell in the same time step (at least 1 minute must pass).
 */
 
-function get_max_profit(array) {
+function get_max_profit(stock_prices_yesterday) {
+  // console.log("value - lowestPrice = currentProfit(profit)");
+  var profit = 0;
+  var lowestPrice = stock_prices_yesterday[0];
 
-  var lowestPrice = [];
-  var profit = array[] - lowestPrice;
+  for (var indices in stock_prices_yesterday) {
+    var value = stock_prices_yesterday[indices];
+    var currentProfit = value - lowestPrice;
 
-    for (var indices in array) {
-      var value = array[indices];
+    if (value <= lowestPrice) {
+      // console.log(value+ " - " +lowestPrice+ " = loss " +currentProfit+ "(" +profit+ ")");
+      lowestPrice = value;
+    } else if (value > lowestPrice && currentProfit > profit) {
+      // console.log(value+ " - " +lowestPrice+ " = gain " +currentProfit+ "(" +profit+ ")");
+      profit = currentProfit;
+    }
+  }
+  return profit;
+}
 
-      if (value < lowestPrice) {
-        lowestPrice = value;
-      } else if (value > lowestPrice) {
-        currentProfit = value - lowestPrice;
-        if (currentProfit > profit) {
-           profit = currentProfit;
-        }
-      }
+function get_max_profit_or_min_loss(stock_prices_yesterday) {
+  // console.log("value - lowestPrice = currentProfit(profit)");
+  var profit = 0;
+  var loss = 0;
+  var lowestPrice = stock_prices_yesterday[0];
+
+  for (var indices in stock_prices_yesterday) {
+    var value = stock_prices_yesterday[indices];
+    var currentProfitDeficit = value - lowestPrice;
+
+    if (currentProfitDeficit < 0 && indices <= 1) {
+      console.log(profit + " " + currentProfitDeficit);
+      profit = currentProfitDeficit;
     }
 
+    // else if (value <= lowestPrice) {
+    else if (currentProfitDeficit <= profit && value <= lowestPrice) {
+      console.log(value+ " - " +lowestPrice+ " = loss " +currentProfitDeficit+ "(" +profit+ ")");
+      lowestPrice = value;
+    } else if (value > lowestPrice && currentProfitDeficit > profit) {
+      console.log(value+ " - " +lowestPrice+ " = gain " +currentProfitDeficit+ "(" +profit+ ")");
+      profit = currentProfitDeficit;
+    }
+  }
+  return profit;
 }
