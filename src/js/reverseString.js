@@ -16,14 +16,29 @@ function reverseStringIterative(str) {
   return newString;
 }
 
-function reverseStringRecursive(str) {
-  // base case
-  if (str.length === 1) {
-    return str;
-  } else {
-    // slice string starting at 1 index and
-    // concatenate character at 0 index
-    return reverseStringRecursive(str.slice(1)) + str[0];
+  function reverseStringRecursive(str) {
+    // base case
+    if (str.length <= 1) {
+      return str;
+    }
+      // slice string starting at 1 index onwards and
+      // concatenate character at 0 index to the end
+      return reverseStringRecursive(str.slice(1)) + str[0];
   }
 
-}
+function reverseSwapString(str) {
+  var strArr = str.split("");
+  var mid = Math.floor(strArr.length/2);
+
+  for (var i=0; i<=mid; i++) {
+    var lastIndices = strArr.length - 1 - i;
+    var store = strArr[i];
+    console.log(strArr[i]);
+
+    strArr[i] = strArr[lastIndices];
+    strArr[lastIndices] = store;
+  };
+
+  str = strArr.join("");
+  return str;
+};
