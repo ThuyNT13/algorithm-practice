@@ -13,49 +13,44 @@ get_max_profit(stock_prices_yesterday)
 No "shorting"—you must buy before you sell. You may not buy and sell in the same time step (at least 1 minute must pass).
 */
 
-function get_max_profit(stock_prices_yesterday) {
-  // console.log("value - lowestPrice = currentProfit(profit)");
-  var profit = 0;
-  var lowestPrice = stock_prices_yesterday[0];
+function getMaxProfit(stockYesterday) {
+  if (stockYesterday.length < 2) {
+    throw new Error("At least 2 prices needed.")
+  }
 
-  for (var indices in stock_prices_yesterday) {
-    var value = stock_prices_yesterday[indices];
-    var currentProfit = value - lowestPrice;
+  var profit = stockYesterday[1] - stockYesterday[0];
+  var lowestPrice = stockYesterday[0];
 
-    if (value <= lowestPrice) {
-      // console.log(value+ " - " +lowestPrice+ " = loss " +currentProfit+ "(" +profit+ ")");
-      lowestPrice = value;
-    } else if (value > lowestPrice && currentProfit > profit) {
-      // console.log(value+ " - " +lowestPrice+ " = gain " +currentProfit+ "(" +profit+ ")");
-      profit = currentProfit;
-    }
+  // start at 2 index as not able to buy until there are 2
+  for (var i=1; i<stockYesterday.length; i++) {
+    var currentPrice = stockYesterday[i];
+    var currentProfit = currentPrice - lowestPrice;
+
+    if (currentPrice < lowestPrice) { lowestPrice = currentPrice; }
+    if (currentProfit > profit) { profit = currentProfit; }
   }
   return profit;
 }
 
-function get_max_profit_or_min_loss(stock_prices_yesterday) {
-  // console.log("value - lowestPrice = currentProfit(profit)");
-  var profit = 0;
-  var loss = 0;
-  var lowestPrice = stock_prices_yesterday[0];
+function getMaxProfitMinLoss(stockYesterday) {
+  var minPrice = stockYesterday[0];
+  var maxProfit = stockYesterday[1] - stockYesterday[0];
 
-  for (var indices in stock_prices_yesterday) {
-    var value = stock_prices_yesterday[indices];
-    var currentProfitDeficit = value - lowestPrice;
-
-    if (currentProfitDeficit < 0 && indices <= 1) {
-      console.log(profit + " " + currentProfitDeficit);
-      profit = currentProfitDeficit;
-    }
-
-    // else if (value <= lowestPrice) {
-    else if (currentProfitDeficit <= profit && value <= lowestPrice) {
-      console.log(value+ " - " +lowestPrice+ " = loss " +currentProfitDeficit+ "(" +profit+ ")");
-      lowestPrice = value;
-    } else if (value > lowestPrice && currentProfitDeficit > profit) {
-      console.log(value+ " - " +lowestPrice+ " = gain " +currentProfitDeficit+ "(" +profit+ ")");
-      profit = currentProfitDeficit;
-    }
+  if (stockYesterday.length < 2) {
+    throw new Error("At least 2 prices needed.")
   }
-  return profit;
+
+  // start at 2 index as not able to buy until there are 2
+  for (var i=1; i<stockYesterday.length; i++) {
+    var currentVal = stockYesterday[i];
+    // calculate profit first with current minPrice
+    var profit = currentVal - minPrice;
+
+    // returns the lowest of the two
+    minPrice = Math.min(minPrice, currentVal);
+
+    // returns the highest of the two
+    maxProfit = Math.max(maxProfit, profit);
+  }
+  return maxProfit;
 }
