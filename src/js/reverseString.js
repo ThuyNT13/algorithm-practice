@@ -22,7 +22,7 @@ function reverseStringIterative(str) {
       return str;
     }
       // slice string starting at 1 index onwards and
-      // concatenate character at 0 index to the end
+      // concatenate character at 0 index to the end; this operation occurs after popping stacks.
       return reverseStringRecursive(str.slice(1)) + str[0];
   }
 
