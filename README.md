@@ -11,11 +11,14 @@ open SpecRunner.html
 ## Algorithms
 
 * [Average](src/js/average.js)
+* [Balanced Brackets](src/js/BalancedBrackets.js)
 * [Factorial](src/js/factorial.js)
 * [Fibonacci](src/js/fibonacci.js)
 * [FizzBuzz](src/js/fizzbuzz.js)
 * [Reverse String](src/js/reverseString.js)
+* [Product of All Integers Except for Index](src/js/ProductOfInts.js)
 * [Stock Market](src/js/stockMarket.js)
+
 
 ## Support
 
