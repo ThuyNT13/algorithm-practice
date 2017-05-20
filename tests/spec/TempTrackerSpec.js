@@ -4,7 +4,8 @@ describe('tracks the numbers added', function() {
   tempTrack.insert(6);
   tempTrack.insert(7);
   tempTrack.insert(3);
-  console.log(tempTrack);
+  tempTrack.insert(6);
+  // console.log(tempTrack);
 
   describe('insert()', function() {
     it('records a new temperature', function() {
@@ -24,12 +25,12 @@ describe('tracks the numbers added', function() {
   });
   describe('getMean()', function() {
     it('returns the average', function() {
-      expect(tempTrack.getMean()).toBe(5.25);
+      expect(tempTrack.getMean()).toBe(5.4);
     });
   });
   describe('getMode()', function() {
     it('returns the number that appears the most', function() {
-      expect(tempTrack.getMode([1, 3, 6, 3, 1, 3])).toBe(3);
+      expect(tempTrack.getMode()).toBe(6);
     });
   });
 })

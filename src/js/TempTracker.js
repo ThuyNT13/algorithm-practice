@@ -5,6 +5,14 @@ function TempTracker() {
   this.counter = 0;
   this.sum = 0;
   this.mean = null;
+
+  this.occurences = []; // mode counter
+  for (var i=0; i<111; i++) { // arbitrarily set range of 0...110
+    this.occurences[i] = 0; // what's the point here?
+  }
+
+  this.maxOccurrences = 0;
+  this.mode = null;
 }
 
 // O(1)
@@ -12,6 +20,13 @@ TempTracker.prototype.insert = function(temp) {
   this.counter++;
   this.sum += temp;
   this.mean = this.sum/this.counter;
+
+  this.occurences[temp]++;
+  if (this.occurences[temp] > this.maxOccurrences) {
+    this.mode = temp;
+    this.maxOccurrences = this.occurences[temp];
+    console.log(this.occurences[temp]);
+  };
 
   if (this.maxTemp === null || temp > this.maxTemp) {
     this.maxTemp = temp;
@@ -36,6 +51,7 @@ TempTracker.prototype.getMean = function() {
   return this.mean;
 };
 
+// 
 TempTracker.prototype.getMode = function() {
-
+  return this.mode;
 };
