@@ -6,6 +6,7 @@ function TempTracker() {
   this.sum = 0;
   this.mean = null;
 
+  // does this not count as O(n)?
   this.occurences = []; // mode counter
   for (var i=0; i<111; i++) { // arbitrarily set range of 0...110
     this.occurences[i] = 0; // what's the point here?
@@ -51,7 +52,7 @@ TempTracker.prototype.getMean = function() {
   return this.mean;
 };
 
-// 
+// O(1)
 TempTracker.prototype.getMode = function() {
   return this.mode;
 };
