@@ -7,7 +7,6 @@ describe('tracks the numbers added', function() {
   console.log(tempTrack);
 
   describe('insert()', function() {
-
     it('records a new temperature', function() {
       expect(tempTrack.minTemp).toBe(3);
       expect(tempTrack.maxTemp).toBe(7);
