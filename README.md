@@ -20,6 +20,7 @@ open SpecRunner.html
 * [Reverse String](src/js/reverseString.js)
 * [Product of All Integers Except for Index](src/js/ProductOfInts.js)
 * [Stock Market](src/js/stockMarket.js)
+* [Temperature Tracker](src/js/TempTracker.js)
 
 
 ## Support
