@@ -19,6 +19,7 @@ open SpecRunner.html
 * [FizzBuzz](src/js/fizzbuzz.js)
 * [Reverse String](src/js/reverseString.js)
 * [Product of All Integers Except for Index](src/js/ProductOfInts.js)
+* [Product of Highest 3 Integers](src/js/Product3Ints.js)
 * [Stock Market](src/js/stockMarket.js)
 * [Temperature Tracker](src/js/TempTracker.js)
 
