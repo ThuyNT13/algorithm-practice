@@ -4,7 +4,7 @@ For practicing algorithms and TDD.
 
 - [Jasmine](https://jasmine.github.io/2.4/introduction.html) version 2.5.2.
 
-Run the respective runner files in the browser to get test results.
+Run the respective runner files in the browser to get test results and also see return of *console logs*.
 
 ```bash
 open SpecRunner.html
@@ -17,11 +17,12 @@ open SpecRunner.html
 * [Factorial](src/js/factorial.js)
 * [Fibonacci](src/js/fibonacci.js)
 * [FizzBuzz](src/js/fizzbuzz.js)
+* [Highest Product of 3 Integers](src/js/ProductOf3Ints.js)
+* [Meeting Times Merge](src/js/MeetingTimes.js)
 * [Reverse String](src/js/reverseString.js)
 * [Product of All Integers Except for Index](src/js/ProductOfInts.js)
 * [Stock Market](src/js/stockMarket.js)
 * [Temperature Tracker](src/js/TempTracker.js)
-
 
 ## Support
 
