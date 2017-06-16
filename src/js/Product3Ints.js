@@ -7,8 +7,8 @@ time: O(n log n)  with sorting
 space: O(1)
 
 Bonus
-1. What if we wanted the highest product of 4 items?
-2. What if we wanted the highest product of k items?
+1. What if we wanted the highest product of 4 items? hard-code highestProductOf4
+2. What if we wanted the highest product of k items? RECURSION
 3. If our highest product is really big, it could overflow ↴ . How should we protect against this?
 
 */
