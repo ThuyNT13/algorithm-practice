@@ -3,10 +3,15 @@
 Use Hashmap to count
 
 1. Create an empty object.
-2. For each letter in the array
-    2a. If the letter is not a property of the object charMap then add it with value=1
-    2b. If the letter is already a property of the object increment the count
+2. For each element in the array
+    2a. If the element is not a property of the object charMap then add it with value=1
+    2b. If the element is already a property of the object increment the count
 3. Return the object containing the letters and their frequencies
+
+Improve:
+  1. Handle for capitalization or Uppercases.
+  2. Pass in symbols.
+  3. Other edge cases?
 
 **/
 
