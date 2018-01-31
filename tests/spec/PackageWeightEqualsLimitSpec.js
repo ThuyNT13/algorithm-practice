@@ -1,28 +1,41 @@
-describe("packageWeightEqualsLimit([7, 6, 1, 9, 11, 3, 6])", function() {
-  const arr = [7, 6, 1, 9, 11, 3, 8, 6];
+describe("packageWeightEqualsLimit()", function() {
+  const arr = [4, 6, 10, 16, 15]
+  const arr2 = [7, 6, 1, 10, 15, 3, 8, 11];
 
   describe("returns indices of pair of integers from array which add up to equal limit", function() {
 
-    it("for limit of 9, returns indices [5, 1]", function() {
-      expect(packageWeightEqualsLimit(arr, 9)).toEqual([5,1]);
+    it("8, returns indices [1, 0]", function() {
+      expect(packageWeightEqualsLimit([4,4],8)).toEqual([1,0]); // => [0,0] edge case
     });
-    it("for limit of 4, returns indices [2, 5]", function() {
-      expect(packageWeightEqualsLimit(arr, 4)).toEqual([2,5]); // -> [5, 2] reversed i>j
+    xit("5, returns indices [2, 0]", function() {
+      expect(packageWeightEqualsLimit([4,4,1],5)).toEqual([2,0]); // => [1,1] edge case
     });
-    it("for limit 8, returns indices [0, 1]", function() {
-      expect(packageWeightEqualsLimit([4,4],8)).toEqual([0,1]); // -> [0, 0] edge case
+    it("5, returns indices [2, 1]", function() {
+      expect(packageWeightEqualsLimit([7,4,4],8)).toEqual([2,1]); // edge case
     });
-    it("for limit 13, returns indices [0, 1]", function() {
-      expect(packageWeightEqualsLimit([arr], 13)).toEqual([0,1]); // -> [ ] edge case
+    xit("22, returns indices [1, 3]", function() {
+      expect(packageWeightEqualsLimit(arr, 22)).toEqual([1,3]);
     });
-    it("for limit 14, returns indices [7, 8]", function() {
-      expect(packageWeightEqualsLimit([arr],14)).toEqual([7,8]); // -> [ ] edge case
+    xit("31, returns indices of [4, 3]", function() {
+      expect(packageWeightEqualsLimit(arr, 31)).toEqual([4,3]);
+    })
+    xit("9, returns indices [5, 1]", function() {
+      expect(packageWeightEqualsLimit(arr2, 9)).toEqual([5,1]);
+    });
+    xit("4, returns indices [2, 5]", function() {
+      expect(packageWeightEqualsLimit(arr2, 4)).toEqual([2,5]);
+    });
+    xit("13, returns indices [1, 0]", function() {
+      expect(packageWeightEqualsLimit(arr2, 13)).toEqual([1,0]); // -> [ ] edge case
+    });
+    xit("14, returns indices [7, 8]", function() {
+      expect(packageWeightEqualsLimit(arr2,19)).toEqual([6,7]); // -> [ ] edge case
     });
   })
 
   describe("returns an empty array if no pairs in array add up to equal limit", function() {
-    it("", function() {
-      expect(packageWeightEqualsLimit(arr, 5)).toEqual([]);
+    xit("5 returns []", function() {
+      expect(packageWeightEqualsLimit(arr2, 5)).toEqual([]);
     })
   });
 });
