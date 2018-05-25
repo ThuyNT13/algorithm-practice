@@ -19,6 +19,10 @@ bottles_of_beer(99) = [
 "Go to the store and buy some more, 99 bottles of beer on the wall..."
 ]
 
+Specs still failing but possibly due to syntax error.
+
+try recursion.
+
 */
 
 
@@ -27,26 +31,22 @@ function bottlesOfBeer(n) {
 
   for (let i=n; i>=0; i--) {
     let bottle = (i===1) ? "bottle":"bottles";
-    let num = (i===0) ? "no more":(i);
+    let num = (i===0) ? "No more":(i);
 
-    result.push(num+ " " +bottle+ " of beer on the wall, " +num+ " " +bottle+ " of beer.\n");
-    // console.log(num+ " " +bottle+ " of beer on the wall, " +num+ " " +bottle+ " of beer.\n");
+    result.push(num+ " " +bottle+ " of beer on the wall, ");
+    num = (i===0) ? "no more":(i);
+    result.push(num+ " " +bottle+ " of beer.\n");
 
     if (i===0) {
       bottle = (n===1) ? "bottle":"bottles";
       result.push("Go to the store and buy some more, " +n+ " " +bottle);
-      // console.log("Go to the store and buy some more, " +n+ " " +bottle);
     } else {
       bottle = ((i-1)===1) ? "bottle":"bottles";
       num = (i===1) ? "no more":(i-1);
       result.push("Take one down, pass it around, " +num+ " " +bottle);
-      // console.log("Take one down, pass it around, " +num+ " " +bottle);
     }
     result.push(" of beer on the wall...\n");
-    // console.log(" of beer on the wall.\n");
   }
 
   return result.join("");
 }
-console.log(bottlesOfBeer(2));
-// console.log(bottles_of_beer(1));
