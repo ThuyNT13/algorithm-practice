@@ -25,6 +25,7 @@ try recursion.
 
 */
 
+//DRY 
 
 function bottlesOfBeer(n) {
   let result = [];
