@@ -10,6 +10,7 @@ function reverseStringBuiltin(str) {
 function reverseStringIterative(str) {
   var newString = "";
   // iterate in decrementing order, adding character at index to new array
+  // watch for off-by-one errors
   for (var i = str.length - 1; i >= 0; i--) {
     newString += str[i];
   }

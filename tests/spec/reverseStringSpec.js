@@ -14,14 +14,14 @@ describe("reverse string", function() {
       expect(reverseStringBuiltin(strE)).toBe(expected);
       expect(reverseStringIterative(strE)).toBe(expected);
       expect(reverseStringRecursive(strE)).toBe(expected);
-      expect(reverseSwapString(strE)).toBe(expected); // => 'dbca' not swapping mid letters
+      expect(reverseSwapString(strE)).toBe(expected);
     });
     it("reverses number string '12345678' to '87654321'", function() {
       const expected = "87654321";
       expect(reverseStringBuiltin(strNE)).toBe(expected);
       expect(reverseStringIterative(strNE)).toBe(expected);
       expect(reverseStringRecursive(strNE)).toBe(expected);
-      expect(reverseSwapString(strNE)).toBe(expected); // => '87645321' not swapping mid nums
+      expect(reverseSwapString(strNE)).toBe(expected);
     });
   });
 
@@ -55,10 +55,9 @@ describe("reverse string", function() {
       expect(reverseStringBuiltin(strWE)).toBe(expected);
       expect(reverseStringIterative(strWE)).toBe(expected);
       expect(reverseStringRecursive(strWE)).toBe(expected);
-      expect(reverseSwapString(strWE)).toBe(expected); // => 'tods iht' mid not swapped
+      expect(reverseSwapString(strWE)).toBe(expected);
     });
   });
-
 
   describe("reverses string with dot", function() {
     it("reverses 'a.' to '.a'", function() {
@@ -66,7 +65,7 @@ describe("reverse string", function() {
       expect(reverseStringBuiltin(strDot)).toBe(expected);
       expect(reverseStringIterative(strDot)).toBe(expected);
       expect(reverseStringRecursive(strDot)).toBe(expected);
-      expect(reverseSwapString(strDot)).toBe(expected); // => "a."
+      expect(reverseSwapString(strDot)).toBe(expected);
     });
   });
 });
