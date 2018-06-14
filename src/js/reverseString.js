@@ -30,7 +30,8 @@ function reverseSwapString(str) {
   var strArr = str.split("");
   var mid = Math.floor(strArr.length/2);
 
-  for (var i=0; i<=mid; i++) {
+  // watch for off-by-one errors
+  for (var i=0; i<mid; i++) {
     var lastIndices = strArr.length - 1 - i;
     var store = strArr[i];
     console.log(strArr[i]);
@@ -39,6 +40,5 @@ function reverseSwapString(str) {
     strArr[lastIndices] = store;
   };
 
-  str = strArr.join("");
-  return str;
+  return strArr.join("");
 };

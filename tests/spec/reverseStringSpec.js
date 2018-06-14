@@ -1,37 +1,72 @@
 describe("reverse string", function() {
-  var str = "deus ex machina";
-  var newString = "anihcam xe sued";
-  var strNum = "12345678";
-  var strNum2 = "123456789";
-  var strNR = "87654321";
-  var strN2 = "987654321";
 
-  describe("reverseStringBuiltin()", function() {
-    it("reverses string using built-in functions", function() {
-      expect(reverseStringBuiltin(str)).toBe(newString);
+  const strNE = "12345678";
+  const strNO = "123456789";
+  const strE = "abcd";
+  const strO = "abcde";
+  const strWO = "deus ex machina";
+  const strWE = "this dot";
+  const strDot = "a.";
+
+  describe("reverses even-lengthed string", function() {
+    it("reverses 'abcd' to 'dcba'", function() {
+      const expected = "dcba";
+      expect(reverseStringBuiltin(strE)).toBe(expected);
+      expect(reverseStringIterative(strE)).toBe(expected);
+      expect(reverseStringRecursive(strE)).toBe(expected);
+      expect(reverseSwapString(strE)).toBe(expected); // => 'dbca' not swapping mid letters
+    });
+    it("reverses number string '12345678' to '87654321'", function() {
+      const expected = "87654321";
+      expect(reverseStringBuiltin(strNE)).toBe(expected);
+      expect(reverseStringIterative(strNE)).toBe(expected);
+      expect(reverseStringRecursive(strNE)).toBe(expected);
+      expect(reverseSwapString(strNE)).toBe(expected); // => '87645321' not swapping mid nums
     });
   });
 
-  describe("reverseStringIterative()", function() {
-    it("reverses string using iteration", function() {
-      expect(reverseStringIterative(str)).toBe(newString);
+  describe("reverses odd-lengthed string", function() {
+    it("reverses 'abcdd' to 'edcba'", function() {
+      const expected = "edcba";
+      expect(reverseStringBuiltin(strO)).toBe(expected);
+      expect(reverseStringIterative(strO)).toBe(expected);
+      expect(reverseStringRecursive(strO)).toBe(expected);
+      expect(reverseSwapString(strO)).toBe(expected);
+    });
+    it("reverses number string '123456789' to '987654321'", function() {
+      const expected = "987654321";
+      expect(reverseStringBuiltin(strNO)).toBe(expected);
+      expect(reverseStringIterative(strNO)).toBe(expected);
+      expect(reverseStringRecursive(strNO)).toBe(expected);
+      expect(reverseSwapString(strNO)).toBe(expected);
     });
   });
 
-  describe("reverseStringRecursive()", function() {
-    it("reverses string using recursion", function() {
-      expect(reverseStringRecursive(str)).toBe(newString);
-      expect(reverseStringRecursive(strNum)).toBe(strNR);
-      expect(reverseStringRecursive(strNum2)).toBe(strN2);
+  describe("reverses string with white space", function() {
+    it("reverses odd-length strings with white space", function() {
+      const expected = "anihcam xe sued";
+      expect(reverseStringBuiltin(strWO)).toBe(expected);
+      expect(reverseStringIterative(strWO)).toBe(expected);
+      expect(reverseStringRecursive(strWO)).toBe(expected);
+      expect(reverseSwapString(strWO)).toBe(expected);
+    });
+    it("reverses even-length strings with white space", function() {
+      const expected = "tod siht";
+      expect(reverseStringBuiltin(strWE)).toBe(expected);
+      expect(reverseStringIterative(strWE)).toBe(expected);
+      expect(reverseStringRecursive(strWE)).toBe(expected);
+      expect(reverseSwapString(strWE)).toBe(expected); // => 'tods iht' mid not swapped
     });
   });
 
-  describe("reverseSwapString()", function() {
-    it("reverses string by swapping", function() {
-      expect(reverseStringRecursive(str)).toBe(newString);
-      expect(reverseStringRecursive(strNum)).toBe(strNR);
-      expect(reverseStringRecursive(strNum2)).toBe(strN2);
+
+  describe("reverses string with dot", function() {
+    it("reverses 'a.' to '.a'", function() {
+      const expected = ".a"
+      expect(reverseStringBuiltin(strDot)).toBe(expected);
+      expect(reverseStringIterative(strDot)).toBe(expected);
+      expect(reverseStringRecursive(strDot)).toBe(expected);
+      expect(reverseSwapString(strDot)).toBe(expected); // => "a."
     });
   });
-
 });
