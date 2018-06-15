@@ -15,3 +15,14 @@ const rotateRight = function(nums, k) {
   }
   return nums;
 };
+
+/*
+rotate left
+*/
+const rotateLeft = function(nums, k) {
+  for (let i=0; i<k; i++) {
+    let store = nums.shift();
+    nums.push(store);
+  }
+  return nums;
+}
