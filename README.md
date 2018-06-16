@@ -12,6 +12,8 @@ open SpecRunner.html
 
 ## Algorithms
 
+* [Anagram](src/js/anagram.js)
+* [Array Rotation](src/js/arrayRotation.js)
 * [Average](src/js/average.js)
 * [Balanced Brackets](src/js/balancedBrackets.js)
 * [Bottles of Beer](src/js/bottlesOfBeer.js)
@@ -19,6 +21,7 @@ open SpecRunner.html
 * [Fibonacci](src/js/fibonacci.js)
 * [FizzBuzz](src/js/fizzbuzz.js)
 * [Meeting Times Merge](src/js/meetingTimes.js)
+* [Palindrome](src/js/palindrome.js)
 * [Product of All Integers Except for Index](src/js/productOfInts.js)
 * [Product of Highest 3 Integers](src/js/product3Ints.js)
 * [Reverse String, 4 ways](src/js/reverseString.js)
