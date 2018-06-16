@@ -7,7 +7,7 @@ Note: For the purpose of this problem, we define empty string as valid palindrom
 */
 
 const isPalindrome = function(s) {
-  const arr = s.toLowerCase().replace(/[^0-9a-z]/gi, '').split("");
+  const arr = s.toLowerCase().replace(/[^\w\d]/gi, '').split("");
   const mid = Math.floor(arr.length/2);
 
   if (s=="") {

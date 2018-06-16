@@ -1,7 +1,7 @@
 describe("isPalindrome()", function() {
   describe("returns true for ", function() {
     it("'A man, a plan, a canal: Panama'", function() {
-      const str = "A man, a plan, a canal: Panama";
+      const str = "A man, a plan, a canal: Panama.";
       expect(isPalindrome(str)).toBe(true);
     });
   });
