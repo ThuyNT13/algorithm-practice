@@ -10,8 +10,7 @@ Given an array, rotate the array to the right by k steps, where k is non-negativ
 
 const rotateRight = function(nums, k) {
   for (let i=0; i<k; i++) {
-    let store = nums.pop();
-    nums.unshift(store);
+    nums.unshift(nums.pop());
   }
   return nums;
 };
@@ -21,8 +20,7 @@ rotate left
 */
 const rotateLeft = function(nums, k) {
   for (let i=0; i<k; i++) {
-    let store = nums.shift();
-    nums.push(store);
+    nums.push(nums.shift());
   }
   return nums;
 }
