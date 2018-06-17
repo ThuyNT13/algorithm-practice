@@ -11,6 +11,38 @@ class LinkedList {
     this.size = 0;
   }
 
+  find(el) {
+    let current = this.head;
+
+    if (current.val == el) {
+      return this.head.val;
+    }
+
+    while (current.next) {
+      if (current.next.val == el) {
+        return current.next.val;
+      }
+      // increment
+      current = current.next;
+    }
+  }
+
+  findBy(index) {
+    let current = this.head;
+    let count = 0;
+
+    if (index === 0) {
+      return this.head.val;
+    }
+
+    while (count < index-1) {
+      // increment
+      current = current.next;
+      count++;
+    }
+    return current.next.val;
+  }
+
   append(el) {
     const node = new Node(el);
 
@@ -18,8 +50,9 @@ class LinkedList {
       this.head = node;
     } else {
       let current = this.head;
-      // iterate towards tail
+
       while (current.next) {
+        // increment towards tail
         current = current.next;
       }
       // new tail
