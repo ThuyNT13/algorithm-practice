@@ -38,7 +38,7 @@ class LinkedList {
       this.size--;
       return el;
     }
-    // iterate
+    // iterate til value found and deleted
     while (current.next) {
       if (current.next.val == el) {
         current.next = current.next.next;
@@ -50,6 +50,43 @@ class LinkedList {
   }
 
   removeBy(index) {
+    let current = this.head;
+    let count = 0;
+    let prev;
 
+    if (index === 0) {
+      this.head = current.next;
+      this.size--;
+      return this.head.val;
+    }
+    // iterate only up to index, watch off-by-one error
+    while (count < index-1) {
+      prev = current;
+      current = current.next;
+      count++;
+    }
+    prev.next = current.next;
+    this.size--;
+    return this.head;
+  }
+
+  // for visual: https://www.geeksforgeeks.org/reverse-a-linked-list/
+  reverse() {
+    let current = this.head;
+    let next;
+    let prev = null;
+
+    while(current) {
+      // current.next saved to next
+      next = current.next;
+      // set current to point to previous, no longer pointing to current.next/next
+      current.next = prev;
+      // increment previous to current node
+      prev = current;
+      // increment current node to next node or null at end of list
+      current = next;
+    }
+    // final prev saved to new this.head
+    this.head = prev;
   }
 }
