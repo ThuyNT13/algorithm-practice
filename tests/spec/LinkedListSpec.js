@@ -27,7 +27,7 @@ describe("LinkedList object", function() {
       ll.remove("stuff not needed");
       expect(ll.size).toBe(2);
       ll.remove("stuff");
-      // expect(ll.size).toBe(1); // returns 2?
+      expect(ll.size).toBe(1); // returns 2?
       expect(ll.head.val).toBe("more stuff");
       expect(ll.head.next).toBe(null);
     })

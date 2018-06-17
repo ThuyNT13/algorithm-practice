@@ -17,19 +17,15 @@ class LinkedList {
     if (this.head == null) {
       this.head = node;
     } else {
-
       let current = this.head;
-
       // iterate towards tail
       while (current.next) {
         current = current.next;
       }
-
       // new tail
       current.next = node;
     }
     this.size++;
-    // return element added?
     return el;
   }
 
@@ -39,9 +35,10 @@ class LinkedList {
     if (current.val == el) {
       // replace head with next node
       this.head = current.next;
+      this.size--;
+      return el;
     }
-
-      // iterate
+    // iterate
     while (current.next) {
       if (current.next.val == el) {
         current.next = current.next.next;
