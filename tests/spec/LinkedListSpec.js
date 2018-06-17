@@ -1,5 +1,11 @@
 describe("LinkedList object", function() {
   let ll = new LinkedList();
+  let rl = new LinkedList();
+  rl.append(0);
+  rl.append(1);
+  rl.append(2);
+  rl.append(3);
+  rl.append(4);
 
   describe("can be instantiated", function() {
     it("initialize with properties of head, which is null, and size, which is 0", function() {
@@ -72,12 +78,6 @@ describe("LinkedList object", function() {
     //   expect(ll.size).toBe(3);
     // });
     it("by index ", function(){
-      let rl = new LinkedList();
-      rl.append(0);
-      rl.append(1);
-      rl.append(2);
-      rl.append(3);
-      rl.append(4);
       expect(rl.size).toBe(5);
       expect(rl.head.val).toBe(0);
       expect(rl.head.next.val).toBe(1);
@@ -105,20 +105,18 @@ describe("LinkedList object", function() {
 
   describe("reverse()", function() {
     it("reverses the LinkedList", function() {
-      let rl = new LinkedList();
-      rl.append(1);
-      rl.append(2);
-      rl.append(3);
-      rl.append(4);
+      rl.append(5);
       expect(rl.head.val).toBe(1);
-      expect(rl.head.next.val).toBe(2);
-      expect(rl.head.next.next.val).toBe(3);
-      expect(rl.head.next.next.next.val).toBe(4);
-      rl.reverse();
-      expect(rl.head.val).toBe(4);
       expect(rl.head.next.val).toBe(3);
-      expect(rl.head.next.next.val).toBe(2);
+      expect(rl.head.next.next.val).toBe(4);
+      expect(rl.head.next.next.next.val).toBe(5);
+      expect(rl.head.next.next.next.next).toBe(null);
+      rl.reverse();
+      expect(rl.head.val).toBe(5);
+      expect(rl.head.next.val).toBe(4);
+      expect(rl.head.next.next.val).toBe(3);
       expect(rl.head.next.next.next.val).toBe(1);
+      expect(rl.head.next.next.next.next).toBe(null);
     });
   });
 });
