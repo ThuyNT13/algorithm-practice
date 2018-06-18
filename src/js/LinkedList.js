@@ -14,29 +14,28 @@ class LinkedList {
   find(el) {
     let current = this.head;
 
-    if (current.val == el) {
-      return this.head.val;
-    }
-
-    while (current.next) {
-      if (current.next.val == el) {
-        return current.next.val;
+    while (current) {
+      if (current.val == el) {
+        return current.val;
       }
       // increment
       current = current.next;
     }
+    return "Not found."
   }
 
   findBy(index) {
     let current = this.head;
     let count = 0;
 
+    // TODO Out-of-bound error
+
     if (index === 0) {
       return this.head.val;
     }
 
     while (count < index-1) {
-      // increment
+      // increment to index
       current = current.next;
       count++;
     }
@@ -45,21 +44,27 @@ class LinkedList {
 
   append(el) {
     const node = new Node(el);
+    let current = this.head;
 
     if (this.head == null) {
+      // set new node to head
       this.head = node;
-    } else {
-      let current = this.head;
-
-      while (current.next) {
-        // increment towards tail
-        current = current.next;
-      }
-      // new tail
-      current.next = node;
+      this.size++;
+      return this.head.val;
     }
+
+    while (current.next) {
+      // increment towards tail
+      current = current.next;
+    }
+    // set reference/pointer to new tail
+    current.next = node;
     this.size++;
-    return el;
+    return current.next.val;
+  }
+
+  insertAt(index) {
+
   }
 
   remove(el) {
@@ -69,23 +74,30 @@ class LinkedList {
       // replace head with next node
       this.head = current.next;
       this.size--;
+      // what should be returned here?
       return el;
     }
-    // iterate til value found and deleted
+
     while (current.next) {
       if (current.next.val == el) {
+        // point next to next.next, orphaning current next
         current.next = current.next.next;
         this.size--;
+        // what should be returned here?
         return el;
       }
+      // increment
       current = current.next;
     }
+    return "Not found."
   }
 
   removeBy(index) {
     let current = this.head;
     let count = 0;
     let prev;
+
+    // TODO Out-of-bound error
 
     if (index === 0) {
       this.head = current.next;
@@ -94,10 +106,13 @@ class LinkedList {
     }
     // iterate only up to index, watch off-by-one error
     while (count < index-1) {
+      // store current to prev
       prev = current;
+      // increment
       current = current.next;
       count++;
     }
+    // TODO
     prev.next = current.next;
     this.size--;
     return this.head;
@@ -112,7 +127,7 @@ class LinkedList {
     while(current) {
       // current.next saved to next
       next = current.next;
-      // set current to point to previous, no longer pointing to current.next/next
+      // set referernce/pointer to prev, no longer pointing to current.next/next
       current.next = prev;
       // increment previous to current node
       prev = current;

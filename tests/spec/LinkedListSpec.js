@@ -31,9 +31,9 @@ describe("LinkedList object", function() {
   });
 
   describe("find()", function() {
-    // it("returns error for element not found", function() {
-    //   // to be implemented
-    // });
+    it("returns error for element not found", function() {
+      expect(ll.find("not here")).toEqual("Not found.");
+    });
     it("finds element", function() {
       expect(ll.find("stuff")).toBe("stuff");
       expect(ll.find("more stuff")).toBe("more stuff");
@@ -53,11 +53,11 @@ describe("LinkedList object", function() {
   })
 
   describe("remove()", function() {
-    // it("returns error for node not found", function() {
-    //   expect(ll.size).toBe(3);
-    //   // to be implemented
-    //   expect(ll.size).toBe(3);
-    // });
+    it("returns error for node not found", function() {
+      expect(ll.size).toBe(3);
+      expect(ll.remove("not here")).toEqual("Not found.");
+      expect(ll.size).toBe(3);
+    });
     it("node by element", function() {
       ll.remove("more stuff");
       expect(ll.size).toBe(2);
