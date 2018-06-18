@@ -28,6 +28,11 @@ open SpecRunner.html
 * [Stock Market](src/js/stockMarket.js)
 * [Temperature Tracker](src/js/tempTracker.js)
 
+## Data Structures
+Implementing data structures from scratch:
+
+* [LinkedList](src/js/LinkedList.js)
+
 ## Support
 
 Please open [an issue](https://github.com/ThuyNT13/algorithm-practice/issues) for support.
