@@ -5,7 +5,6 @@ function binarySearch(arr, el) {
   while (start <= end) {
     let mid = Math.floor((end+start) / 2);
 
-    // check if midpoint has value
     if (arr[mid] == el) {
       return mid;
     }
@@ -17,5 +16,4 @@ function binarySearch(arr, el) {
     }
   }
   return -1;
-  //
 }

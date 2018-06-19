@@ -10,8 +10,10 @@ describe("binarySearch()", function() {
       expect(binarySearch(arr, 13)).toBe(4);
     });
     it("returns last index", function() {
-      const arr = [1,3,7,12,15,16];
-      expect(binarySearch(arr,16)).toBe(arr.length-1);
+      expect(binarySearch(arr,99)).toBe(arr.length-1);
+    });
+    it("returns -1 if element not found", function() {
+      expect(binarySearch(arr, 21)).toBe(-1);
     });
   });
-})
+ })
