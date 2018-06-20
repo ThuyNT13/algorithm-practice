@@ -30,6 +30,15 @@ describe("LinkedList object", function() {
     });
   });
 
+  describe("insertAt()", function() {
+    let l = new LinkedList();
+    it("an element at index", function() {
+      l.insertAt("stuff to be erased", 0);
+      // console.log(l.head);
+      expect(l.head.val).toBe("stuff to be erased");
+    })
+  })
+
   describe("find()", function() {
     it("returns error for element not found", function() {
       expect(ll.find("not here")).toEqual("Not found.");
@@ -43,7 +52,9 @@ describe("LinkedList object", function() {
 
   describe("findBy()", function() {
     // it("returns error for element not found", function() {
+    //   expect(ll.size).toBe();
     //   // to be implemented
+    //   expect(ll.size).toBe();
     // });
     it("finds element by index", function() {
       expect(ll.findBy(0)).toBe("stuff");
@@ -73,9 +84,9 @@ describe("LinkedList object", function() {
 
   describe("removeBy()", function() {
     // it("returns error for node not found", function() {
-    //   expect(ll.size).toBe(3);
+    //   expect(rl.size).toBe();
     //   // to be implemented
-    //   expect(ll.size).toBe(3);
+    //   expect(rl.size).toBe();
     // });
     it("by index ", function(){
       expect(rl.size).toBe(5);
@@ -85,9 +96,9 @@ describe("LinkedList object", function() {
       expect(rl.head.next.next.next.val).toBe(3);
       expect(rl.head.next.next.next.next.val).toBe(4);
       expect(rl.head.next.next.next.next.next).toBe(null);
-      console.log(rl);
+      // console.log(rl);
       rl.removeBy(0);
-      console.log(rl);
+      // console.log(rl);
       expect(rl.size).toBe(4);
       expect(rl.head.val).toBe(1);
       expect(rl.head.next.val).toBe(2);
@@ -100,23 +111,6 @@ describe("LinkedList object", function() {
       expect(rl.head.next.val).toBe(3);
       expect(rl.head.next.next.val).toBe(4);
       expect(rl.head.next.next.next).toBe(null);
-    });
-  });
-
-  describe("reverse()", function() {
-    it("reverses the LinkedList", function() {
-      rl.append(5);
-      expect(rl.head.val).toBe(1);
-      expect(rl.head.next.val).toBe(3);
-      expect(rl.head.next.next.val).toBe(4);
-      expect(rl.head.next.next.next.val).toBe(5);
-      expect(rl.head.next.next.next.next).toBe(null);
-      rl.reverse();
-      expect(rl.head.val).toBe(5);
-      expect(rl.head.next.val).toBe(4);
-      expect(rl.head.next.next.val).toBe(3);
-      expect(rl.head.next.next.next.val).toBe(1);
-      expect(rl.head.next.next.next.next).toBe(null);
     });
   });
 });

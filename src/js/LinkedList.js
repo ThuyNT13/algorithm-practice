@@ -28,7 +28,7 @@ class LinkedList {
     let current = this.head;
     let count = 0;
 
-    // TODO Out-of-bound error
+    // TODO Out-of-bound exception
 
     if (index === 0) {
       return this.head.val;
@@ -42,6 +42,7 @@ class LinkedList {
     return current.next.val;
   }
 
+  // O(n) as it needs to iterate all the way to the end
   append(el) {
     const node = new Node(el);
     let current = this.head;
@@ -63,8 +64,28 @@ class LinkedList {
     return current.next.val;
   }
 
-  insertAt(index) {
+  insertAt(el, index) {
+    const node = new Node(el);
+    let current = this.head;
+    let prev;
+    let count = 0;
 
+    // Out-of-Bound exception
+
+    if (index === 0) {
+      node.next = current;
+      this.head = node;
+      this.size++;
+      return this.head.val;
+    }
+
+    while (count < index-1) {
+      // increment to index
+      current = current.next;
+      count++;
+    }
+
+    this.size++;
   }
 
   remove(el) {
@@ -112,29 +133,9 @@ class LinkedList {
       current = current.next;
       count++;
     }
-    // TODO
+    //
     prev.next = current.next;
     this.size--;
     return this.head;
-  }
-
-  // for visual: https://www.geeksforgeeks.org/reverse-a-linked-list/
-  reverse() {
-    let current = this.head;
-    let next;
-    let prev = null;
-
-    while(current) {
-      // current.next saved to next
-      next = current.next;
-      // set referernce/pointer to prev, no longer pointing to current.next/next
-      current.next = prev;
-      // increment previous to current node
-      prev = current;
-      // increment current node to next node or null at end of list
-      current = next;
-    }
-    // final prev saved to new this.head
-    this.head = prev;
   }
 }
