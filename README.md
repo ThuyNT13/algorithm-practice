@@ -26,6 +26,7 @@ open SpecRunner.html
 * [Palindrome](src/js/palindrome.js)
 * [Product of All Integers Except for Index](src/js/productOfInts.js)
 * [Product of Highest 3 Integers](src/js/product3Ints.js)
+* [Reverse LinkedList](src/js/reverseList.js)
 * [Reverse String, 4 ways](src/js/reverseString.js)
 * [Stock Market](src/js/stockMarket.js)
 * [Temperature Tracker](src/js/tempTracker.js)
