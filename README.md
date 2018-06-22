@@ -10,6 +10,22 @@ Run the respective runner files in the browser to get test results and also see 
 open SpecRunner.html
 ```
 
+## Benchmark
+
+Added benchmarking to see speed of algorithms, like [string reversal](src/js/reverseString.js):
+
+```bash
+node reverseString.js
+builtin reverse() x 668,487 ops/sec ±0.91% (82 runs sampled)
+iterative string reversal x 2,056,665 ops/sec ±1.17% (88 runs sampled)
+recursive string reversal x 738,545 ops/sec ±0.80% (92 runs sampled)
+swapped reversal x 844,375 ops/sec ±0.95% (87 runs sampled)
+Fastest is iterative string reversal
+Slowest is builtin reverse()
+```
+
+https://github.com/bestiejs/benchmark.js/
+
 ## Algorithms
 
 * [Anagram](src/js/anagram.js)

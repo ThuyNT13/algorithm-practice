@@ -1,3 +1,4 @@
+var Benchmark = require('benchmark');
 /*
 to compare runtimes for string reversal JS functions:
  http://eddmann.com/posts/ten-ways-to-reverse-a-string-in-javascript/
@@ -35,7 +36,7 @@ function reverseSwapString(str) {
   for (var i=0; i<mid; i++) {
     var lastIndices = strArr.length - 1 - i;
     var store = strArr[i];
-    console.log(strArr[i]);
+    // console.log(strArr[i]);
 
     strArr[i] = strArr[lastIndices];
     strArr[lastIndices] = store;
@@ -43,3 +44,33 @@ function reverseSwapString(str) {
 
   return strArr.join("");
 };
+
+//  BENCHMARK
+
+const suite = new Benchmark.Suite;
+let word = "supercalifragilisticexpialidocious";
+
+suite
+  .add("builtin reverse()", function() {
+    reverseStringBuiltin(word);
+  })
+  .add("iterative string reversal", function() {
+    reverseStringIterative(word)
+  })
+  .add("recursive string reversal", function() {
+    reverseStringRecursive(word);
+  })
+  .add("swapped reversal", function() {
+    reverseSwapString(word);
+  })
+
+  .on("cycle", function(event) {
+    console.log(String(event.target));
+  })
+
+  .on("complete", function() {
+    console.log("Fastest is " + this.filter("fastest").map("name"));
+    console.log("Slowest is " + this.filter("slowest").map("name"));
+  })
+
+  .run();
