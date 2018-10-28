@@ -11,8 +11,8 @@ Class LinkedList {
     this.size = 0
   }
   
-  reverse(linkList) {
-    let current = linkList.head;
+  reverse() {
+    let current = this.head;
     let prev;
     let next;
     
@@ -27,8 +27,8 @@ Class LinkedList {
       current = next;
     }
     // point head to prev which should be the tail, with current null
-    linkList.head = prev;
+    this.head = prev;
     
-    return linkList;
+    return this;
   }
 }
