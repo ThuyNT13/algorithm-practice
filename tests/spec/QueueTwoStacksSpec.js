@@ -12,15 +12,15 @@ describe("Implement queue with two stacks", function() {
     })
     it("appends an element correctly after dequeing", function() {
       Queue.dequeue();
-      Queue.enqueue(4);
-      const expected = [2,3,4];
-      expected(Queue.inStack).toEqual(expected);
+      Queue.enqueue(5);
+      const expected = [2,3,4,5];
+      expect(Queue.inStack).toEqual(expected);
     })
   })
   describe("dequeue()", function () {
     it("removes an element from head", function () {
       Queue.dequeue();
-      const expected = [2,3];
+      const expected = [3,4,5];
       expect(Queue.inStack).toEqual(expected);
     })
   })
