@@ -12,21 +12,13 @@ open SpecRunner.html
 
 ## Benchmark
 
-Added benchmarking to see speed of algorithms, like [string reversal](src/js/reverseString.js):
+Possible to add benchmarking to compare methods. 
 
-```bash
-node reverseString.js
-builtin reverse() x 668,487 ops/sec ±0.91% (82 runs sampled)
-iterative string reversal x 2,056,665 ops/sec ±1.17% (88 runs sampled)
-recursive string reversal x 738,545 ops/sec ±0.80% (92 runs sampled)
-swapped reversal x 844,375 ops/sec ±0.95% (87 runs sampled)
-Fastest is iterative string reversal
-Slowest is builtin reverse()
-```
-
-https://github.com/bestiejs/benchmark.js/
+[**Benchmark.js**](https://benchmarkjs.com/)
 
 ## Algorithms
+
+I've removed the solutions from `master` and kept in feature branch `thuy-solution` in case anyone wants to have a repo with tests ready-made for downloading. 
 
 * [Anagram](src/js/anagram.js)
 * [Array Rotation](src/js/arrayRotation.js)
@@ -38,19 +30,19 @@ https://github.com/bestiejs/benchmark.js/
 * [Fibonacci](src/js/fibonacci.js)
 * [FizzBuzz](src/js/fizzbuzz.js)
 * [Meeting Times Merge](src/js/meetingTimes.js)
-* [Merge 2 sorted Linked Lists](src/js/sortedListMerge.js)
 * [Palindrome](src/js/palindrome.js)
 * [Product of All Integers Except for Index](src/js/productOfInts.js)
 * [Product of Highest 3 Integers](src/js/product3Ints.js)
-* [Reverse LinkedList](src/js/reverseList.js)
-* [Reverse String, 4 ways](src/js/reverseString.js)
 * [Stock Market](src/js/stockMarket.js)
 * [Temperature Tracker](src/js/tempTracker.js)
 
 ## Data Structures
-Implementing data structures from scratch:
 
 * [LinkedList](src/js/LinkedList.js)
+* [Merge 2 sored Arrays](src/js/mergeArrays.js)
+* [Merge 2 sorted Linked Lists](src/js/sortedListMerge.js)
+* [Reverse LinkedList](src/js/reverseList.js)
+* [Reverse String](src/js/reverseString.js)
 
 ## Support
 
