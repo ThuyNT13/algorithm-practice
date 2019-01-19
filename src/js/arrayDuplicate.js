@@ -8,18 +8,6 @@ function containsDuplicate(nums) {
 
 };
 
-// const countDuplicates = function(nums) {
-//   let repeatCount = {};
-//   for (let i=0; i<nums.length; i++) {
-//     if (repeatCount.hasOwnProperty(nums[i])) {
-//       repeatCount[nums[i]] += 1;
-//     } else {
-//       repeatCount[nums[i]] = 1;
-//     }
-//   }
-//   return repeatCount;
-// }
-
 /*
 Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 
@@ -31,22 +19,6 @@ Does not change array but modifies in place by utilizing *count* to keep track o
 https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/
 */
 
-const removeDuplicates = function(nums) {
-  let count = 0;
-  let org = 1;
-  let result = [];
+function removeDuplicates(nums) {
 
-  while (org < nums.length) {
-    if (nums[count] == nums[org]) {
-      org++;
-    } else {
-      count++;
-      nums[count] = nums[org];
-      org++;
-    }
-  }
-
-  result.push(count+1);
-  result.push(nums.slice(0,count+1));
-  return result;
 }
