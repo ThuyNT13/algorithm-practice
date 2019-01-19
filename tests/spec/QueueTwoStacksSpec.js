@@ -24,4 +24,14 @@ describe("Implement queue with two stacks", function() {
       expect(Queue.inStack).toEqual(expected);
     })
   })
+  describe("when queue is empty", function() {
+    it("throws an error", function() {
+      Queue.dequeue();
+      Queue.dequeue();
+      Queue.dequeue();
+      expect(function() {
+        Queue.dequeue();
+      }).toThrow();
+    })
+  })
 })
