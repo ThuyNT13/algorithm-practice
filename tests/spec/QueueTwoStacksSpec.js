@@ -16,16 +16,14 @@ describe("Implement queue with two stacks", function() {
       const expected = [2,3,4,5];
       expect(Queue.inStack).toEqual(expected);
     })
-  })
+  });
   describe("dequeue()", function () {
     it("removes an element from head", function () {
       Queue.dequeue();
       const expected = [3,4,5];
       expect(Queue.inStack).toEqual(expected);
-    })
-  })
-  describe("when queue is empty", function() {
-    it("throws an error", function() {
+    });
+    it("throws an error when queue is empty", function() {
       Queue.dequeue();
       Queue.dequeue();
       Queue.dequeue();
@@ -33,5 +31,5 @@ describe("Implement queue with two stacks", function() {
         Queue.dequeue();
       }).toThrow();
     })
-  })
+  });
 })
