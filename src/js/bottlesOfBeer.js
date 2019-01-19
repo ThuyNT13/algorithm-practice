@@ -28,26 +28,5 @@ try recursion.
 //DRY 
 
 function bottlesOfBeer(n) {
-  let result = [];
 
-  for (let i=n; i>=0; i--) {
-    let bottle = (i===1) ? "bottle":"bottles";
-    let num = (i===0) ? "No more":(i);
-
-    result.push(num+ " " +bottle+ " of beer on the wall, ");
-    num = (i===0) ? "no more":(i);
-    result.push(num+ " " +bottle+ " of beer.\n");
-
-    if (i===0) {
-      bottle = (n===1) ? "bottle":"bottles";
-      result.push("Go to the store and buy some more, " +n+ " " +bottle);
-    } else {
-      bottle = ((i-1)===1) ? "bottle":"bottles";
-      num = (i===1) ? "no more":(i-1);
-      result.push("Take one down, pass it around, " +num+ " " +bottle);
-    }
-    result.push(" of beer on the wall...\n");
-  }
-
-  return result.join("");
 }

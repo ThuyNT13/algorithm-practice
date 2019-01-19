@@ -1,35 +1,3 @@
-/* MEMOize function
-function Fibber() {
-    this.memo = {};
-}
-
-Fibber.prototype.fib = function(n) {
-
-    if (n < 0) {
-        throw new Error('Index was negative. No such thing as a negative index in a series.');
-
-    // base cases
-    } else if (n === 0 || n === 1) {
-        return n;
-    }
-
-    // see if we've already calculated this
-    if (this.memo.hasOwnProperty(n)) {
-        console.log('grabbing memo[' + n + '] ');
-        return this.memo[n];
-    }
-
-    console.log('computing fib(' + n + ')');
-    var result = this.fib(n - 1) + this.fib(n - 2);
-
-    // memoize
-    this.memo[n] = result;
-
-    return result;
-}
-
-new Fibber().fib(8);
-*/
 
 // function Change() {
 //   this.memo = {};

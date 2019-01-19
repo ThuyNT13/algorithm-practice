@@ -8,19 +8,13 @@ Given an array, rotate the array to the right by k steps, where k is non-negativ
 - Could you do it in-place with O(1) extra space?
 */
 
-const rotateRight = function(nums, k) {
-  for (let i=0; i<k; i++) {
-    nums.unshift(nums.pop());
-  }
-  return nums;
+function rotateRight(nums, k) {
+
 };
 
 /*
 rotate left
 */
-const rotateLeft = function(nums, k) {
-  for (let i=0; i<k; i++) {
-    nums.push(nums.shift());
-  }
-  return nums;
+function rotateLeft(nums, k) {
+
 }
