@@ -7,8 +7,7 @@ describe("padding an array", function() {
 
     it("does not modify the input array", function() {
       var letters = ["a", "b"];
-      pad(letters, 4);
-      expect(letters).toEqual(["a", "b"]);
+      expect(pad(letters, 4)).toEqual(["a", "b"]);
     });
 
     it("uses the elements in the input array at the beginning of the padded array", function() {
