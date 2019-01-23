@@ -55,13 +55,3 @@ class Queue {
     if (this.size === 0) return true;
   }
 }
-
-const q = new Queue();
-q.enqueue("a");
-q.enqueue("b");
-q.enqueue("c");
-console.log(q); // a
-q.dequeue();
-q.dequeue();
-q.dequeue();
-console.log(q.dequeue());
