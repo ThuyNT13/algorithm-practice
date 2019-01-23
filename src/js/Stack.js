@@ -56,3 +56,37 @@ class StackLinkedList {
     if (this.size <= 0) return true;
   }
 }
+
+// ---------------------
+
+class StackArray {
+  constructor() {
+    this.arrayStack = [];
+  }
+
+  push(data) {
+    this.arrayStack.push(data);
+    return this;
+  } 
+
+  pop() {
+    if (this.isEmpty()) {
+      throw new Error("Stack is empty!");
+    }
+
+    this.arrayStack.pop();
+    return this;
+  }
+
+  peek() {
+    if (this.isEmpty()) {
+      throw new Error("Stack is empty!");
+    }
+
+    return this.arrayStack[this.arrayStack.length-1];
+  }
+
+  isEmpty() {
+    if (this.arrayStack.length === 0) return true;
+  }
+}
