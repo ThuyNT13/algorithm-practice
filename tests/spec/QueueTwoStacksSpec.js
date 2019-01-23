@@ -29,7 +29,7 @@ describe("Implement queue with two stacks", function() {
       Queue.dequeue();
       expect(function() {
         Queue.dequeue();
-      }).toThrow();
+      }).toThrow(new Error("Can't dequeue from empty queue!"));
     })
   });
 })
