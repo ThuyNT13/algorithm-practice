@@ -37,7 +37,7 @@ describe("isSingleRiffle()", function() {
   })
   describe("when shuffled deck is missing cards", function () {
     it("returns false", function () {
-      const actual = isSingleRiffle([1, 5], [2, 3, 6], [1, 6, 3, 5]);
+      const actual = isSingleRiffle([1, 5], [2, 3, 6], [1,3,5,6]);
       const expected = false; 
       expect(actual).toEqual(expected);
     })

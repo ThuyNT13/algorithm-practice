@@ -23,5 +23,9 @@ function isSingleRiffle(half1, half2, shuffledDeck) {
     sdIndex--;
   }
 
-  return true;
+  // checks for false positive when there are cards left in half stacks
+  if (h1Index < 0 && h2Index < 0 && sdIndex < 0) {
+    return true;
+  }
+  return false;
 }
