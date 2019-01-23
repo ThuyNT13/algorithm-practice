@@ -23,9 +23,5 @@ function isSingleRiffle(half1, half2, shuffledDeck) {
     sdIndex--;
   }
 
-  if (sdIndex < 0) {
-    return true;
-  }
-  
-  return false;
+  return true;
 }
