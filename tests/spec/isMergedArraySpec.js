@@ -13,7 +13,7 @@ describe("isMergedArray()", function() {
   })
   describe("when halves are different lengths", function () {
     it("can return true", function() {
-      const actual = isMergedArray([2,3,4,5],[1,6],[1,2,3,4,5,6]);
+      const actual = isMergedArray([2,3,4,5],[6,1],[6,2,3,4,5,1]);
       const expected = true;
       expect(actual).toEqual(expected);
     })
@@ -30,7 +30,7 @@ describe("isMergedArray()", function() {
       expect(actual).toEqual(expected); 
     })
     it("can return false", function() {
-      const actual = isMergedArray([2,3,4,5],[], [1,2,3,4,5]);
+      const actual = isMergedArray([0,2,3,4,5],[], [1,2,3,4,5]);
       const expected = false;
       expect(actual).toEqual(expected);
     })

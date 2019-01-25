@@ -1,4 +1,12 @@
+/*
+  given three arrays, evaluate whether or not the larger array could have been the result of the two smaller arrays merged. 
+*/
+
 function isMergedArray(half1, half2, mergedArray) {
+  if ((half1.length + half2.length) != mergedArray.length ) {
+    return false;
+  }
+
   let h1Index = half1.length - 1;
   let h2Index = half2.length - 1;
   let maIndex = mergedArray.length - 1;
@@ -23,9 +31,5 @@ function isMergedArray(half1, half2, mergedArray) {
     maIndex--;
   }
 
-  // checks for false positive when there are elements left in half stacks
-  if (h1Index < 0 && h2Index < 0 && maIndex < 0) {
-    return true;
-  }
-  return false;
+  return true;
 }
