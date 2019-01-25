@@ -34,12 +34,12 @@ class QueueTwoStacks {
     return this.inStack[0];
   }
 
-  // isEmpty() {
-  //   if (this.inStack.length === 0) {
-  //     return true;
-  //   } 
-  //   return false;
-  // }
+  isEmpty() {
+    if (this.inStack.length === 0) {
+      return true;
+    } 
+    return false;
+  }
 }
 
 const Queue = new QueueTwoStacks();
